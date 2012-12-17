@@ -148,7 +148,7 @@ LOCAL_CFLAGS += -include $(LOCAL_PATH)/util/include/linux/compiler.h
 # for various GNU extensions
 LOCAL_CFLAGS += -include external/elfutils/bionic-fixup/AndroidFixup.h
 
-LOCAL_CFLAGS += -Wno-attributes -Werror
+LOCAL_CFLAGS += -Wno-attributes -Werror $(call cc-option,-Wno-error=unused-parameter)
 
 LOCAL_C_INCLUDES := external/elfutils external/elfutils/libelf external/elfutils/libdw external/elfutils/libdwfl
 
