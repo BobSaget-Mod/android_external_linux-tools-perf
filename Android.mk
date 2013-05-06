@@ -265,7 +265,7 @@ LOCAL_CFLAGS += -DPERF_MAN_PATH='""'
 LOCAL_CFLAGS += -DPERF_INFO_PATH='""'
 LOCAL_CFLAGS += -DPERF_VERSION='"perf.3.0.8_android"'
 
-LOCAL_CFLAGS += -Wno-attributes -Werror
+LOCAL_CFLAGS += -Wno-attributes -Werror $(call cc-option,-Wno-error=unused-parameter)
 
 include $(BUILD_EXECUTABLE)
 
