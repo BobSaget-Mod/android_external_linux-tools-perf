@@ -112,6 +112,9 @@ LOCAL_CFLAGS += -include $(LOCAL_PATH)/util/include/linux/compiler.h
 LOCAL_CFLAGS += \
 	-include $(LOCAL_PATH)/host-$(HOST_OS)-fixup/AndroidFixup.h
 
+# GCC 4.8+
+LOCAL_CFLAGS += $(call cc-option,-Wno-error=unused-parameter)
+
 LOCAL_C_INCLUDES := external/elfutils external/elfutils/libelf external/elfutils/libdw external/elfutils/libdwfl
 
 LOCAL_C_INCLUDES += $(LOCAL_PATH)/host-$(HOST_OS)-fixup
